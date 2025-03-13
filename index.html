@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WefyX</title>
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/47bfcb75ec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/images/we.png">
+    <!-- boxicons cdn -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <main>
+        <!-- site Header -->
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="/images/we.png" alt="Horizone logo">
+                    <h2>WefyX</h2>
+                </div>
+
+                <nav>
+                    <a class="active" href="/">Home</a>
+                    <a href="/">Explore</a>
+                    <a href="/">Bookstore</a>
+                    <a href="/">Guides</a>
+                </nav>
+
+                <div class="search_bar">
+                    <form action="#" method="get">
+                        <input type="text" placeholder="Search..." name="search">
+                        <button title="Search" type="submit"><i class="fa fa-search icon-search"></i></button>
+                    </form>
+                </div>
+
+                <div class="user-account">
+                    <a id="signup-btn" class="btn sign-up" title="Create account">Sign in</a>
+                </div>
+            </div>
+
+            <!-- for blog category menu -->
+            <div class="category">
+                <button class="scroll-button left hidden" id="scrollLeftButton"><i
+                        class="fa-solid fa-angle-left"></i></button>
+                <div class="category-scroller" id="scroller">
+                    <button class="btn active" data-name="all">All</button>
+                    <button class="btn" data-name="education">Education</button>
+                    <button class="btn" data-name="travel">Travel</button>
+                    <button class="btn" data-name="politics">Politics</button>
+                    <button class="btn" data-name="nature">Nature</button>
+                    <button class="btn" data-name="photography">Photography</button>
+                    <button class="btn" data-name="film">Film</button>
+                    <button class="btn" data-name="film">Film</button>
+                    <button class="btn" data-name="film">Film</button>
+                    <button class="btn" data-name="film">Film</button>
+                    <button class="btn" data-name="music">Music</button>
+                    <button class="btn" data-name="technology">Technology</button>
+                    <button class="btn" data-name="skills">Skills</button>
+                    <button class="btn" data-name="motivation">Motivation</button>
+                    <button class="btn" data-name="motivation">Motivation</button>
+                    <button class="btn" data-name="motivation">Motivation</button>
+                    <button class="btn" data-name="motivation">Motivation</button>
+                    <button class="btn" data-name="motivation">Motivation</button>
+                    <button class="btn" data-name="motivation">Motivation</button>
+                    <button class="btn" data-name="motivation">Motivation</button>
+                    <button class="btn" data-name="adventure">Adventure</button>
+                    <button class="btn" data-name="mysterious">Mysterious</button>
+                </div>
+                <button class="scroll-button right" id="scrollRightButton"><i
+                        class="fa-solid fa-angle-right"></i></button>
+            </div>
+
+        </header>
+
+        <!-- Popup login and signup form -->
+        <div class="popup-container" id="popup-container">
+            <div class="loginformcontainer" id="loginformcontainer">
+
+                <img class="form-img" src="/images/loginbg.jpg" alt="bg-image">
+
+                <!-- Login form -->
+
+                <div class="popup" id="login-form">
+                    <h2>Login</h2>
+
+                    <form>
+                        <div class="field">
+                            <input type="text" placeholder="Email" required>
+                        </div>
+
+                        <div class="field">
+                            <input type="password" placeholder="Password" class="password" required>
+                            <i class='bx bx-hide pw-eye'></i>
+                        </div>
+
+                        <div class="form-link">
+                            <a href="#">Forgate password?</a>
+                        </div>
+
+                        <div class="field ">
+                            <button type="submit">Login</button>
+                        </div>
+                    </form>
+
+
+                    <div class="line"></div>
+
+                    <div class="media-options">
+                        <a href="" class="field facebook">
+                            <img src="/images/facebook.png" alt="facebook">
+                            <span>Login with facebook</span>
+                        </a>
+                    </div>
+
+                    <div class="media-options">
+                        <a href="" class="field google">
+                            <img src="/images/google.png" alt="google">
+                            <span>Login with Google</span>
+                        </a>
+                    </div>
+
+                    <div class="form-link form-terms">
+                        <span>Please review and agree to our <a href="#" target="_blank">Terms of Service</a> and <a
+                                href="#" target="_blank">Privacy
+                                Policy</a> before continuing.</span>
+                    </div>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a class="link" href="#create-account">Create account</a></span>
+                    </div>
+
+                </div>
+
+                <!-- Signup form -->
+
+                <div class="popup Signup" id="signup-form" style="display: none;">
+                    <h2>Create account</h2>
+
+                    <form>
+
+                        <div class="field">
+                            <input type="text" placeholder="Email" required>
+                        </div>
+
+                        <div class="field">
+                            <input type="password" placeholder="Create a Password" class="password" required>
+                        </div>
+
+                        <div class="field">
+                            <input type="password" placeholder="Confirm Password" class="password" required>
+                            <i class='bx bx-hide pw-eye'></i>
+                        </div>
+
+
+                        <div class="field ">
+                            <button type="submit">Continue</button>
+                        </div>
+                    </form>
+
+
+                    <div class="line"></div>
+
+                    <div class="media-options">
+                        <a href="" class="field facebook">
+                            <img src="/images/facebook.png" alt="facebook">
+                            <span>Login with facebook</span>
+                        </a>
+                    </div>
+
+                    <div class="media-options">
+                        <a href="" class="field google">
+                            <img src="/images/google.png" alt="facebook">
+                            <span>Login with Google</span>
+                        </a>
+                    </div>
+
+                    <div class="form-link form-terms">
+                        <span>Please review and agree to our <a href="#" target="_blank">Terms of Service</a> and <a
+                                href="#" target="_blank">Privacy
+                                Policy</a> before continuing.</span>
+                    </div>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a class="link" href="#">Login</a></span>
+                    </div>
+
+                </div>
+
+                <button id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+
+        <!-- Blog Card -->
+        <div class="card-section">
+
+            <div class="card-list">
+
+                <div class="card" data-name="education">
+                    <img src="images/carlos-muza-hpjSkU2UYSU-unsplash.jpg" alt="image">
+                    <h2>Dnveiling Lorem for Hmsum Dolor Apple Education Commody</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet consectetur
+                        apple....</p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="education">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Education Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="education">
+                    <img src="images/health2.jpg" alt="image">
+                    <h2>Can't Shed Those Gym? The Problem Might Be In Your Education Health</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="education">
+                    <img src="images/health4-580x460.jpg" alt="image">
+                    <h2>Smart Packs Parking Sensor Tech And Beeps When Education Collisions</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="travel">
+                    <img src="images/health5.jpg" alt="image">
+                    <h2>Netcix Cuts Out The Chill With An Integrated Personal Travel Trainer</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="travel">
+                    <img src="images/robot2-350x220.jpg" alt="image">
+                    <h2>Robot Life On Mars! Meet The Machines Exploring The Red Planet Travel Today</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="politics">
+                    <img src="images/travel5-580x460.jpg" alt="image">
+                    <h2>Hynopedia Helps Female Travelers Find Health Care In Politics Maldivs</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="politics">
+                    <img src="images/tr2.jpg" alt="image">
+                    <h2>Brother and sister playing with kite and plane at the field on the Politics sunset</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="politics">
+                    <img src="images/health4-580x460.jpg" alt="image">
+                    <h2>Smart Packs Parking Sensor Tech And Beeps When Politics Collisions</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="nature">
+                    <img src="images/game2-1-350x220.jpg" alt="image">
+                    <h2>Super Tario Run Isn't Ground, But It Has Mintendo Nature Charm</h2>
+                    <p>Dorem ipsum dolor, sit amet consectetur adipis Commodi enim magni yorem aorem amet....
+                    </p>
+                    <div class="creater-date">
+                        <div class="creater">
+                            <a href="www.google.com">
+                                <img src="images/download.png" alt="">
+                            </a>
+                            <a href="wwww.google.com" class="creater-name" title="Abdulwritex">Nitish Rajput</a>
+                        </div>
+                        <div class="date">
+                            <span>1.4M read</span>
+                            <div class="dot"></div>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+</body>
+<!-- javascript -->
+<script src="script.js"></script>
+
+</html>
