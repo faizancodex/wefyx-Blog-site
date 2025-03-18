@@ -408,37 +408,40 @@ header .category .category-scroller .active:hover {
 
 
 /* for blog card */
-.card-section .card-list {
+.card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px 20px;
   margin-top: 30px;
 }
 
-.card-list .card {
+.card {
+  /* max-width: 300px; */
+  margin: 0 auto; 
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 5px;
   padding: 5px;
   cursor: pointer;
 }
-.card-list .card.hide {
+.card.hide {
   display: none;
 }
-.card-list .card:active {
+.card:active {
   background-color: #dadada;
 }
 
-.card-section .card img {
+.card img {
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 6px;
   object-fit: cover;
 }
-.card-section .card h2 {
+
+.card h2 {
   color: black;
   font-size: 18px;
-  margin-top: 8px;
+  /* margin-top: 8px; */
 
   /* for show less text */
   overflow: hidden;
@@ -448,7 +451,7 @@ header .category .category-scroller .active:hover {
   -webkit-box-orient: vertical;
 }
 
-.card-section .card p {
+.card p {
   font-size: var(--my-font-size);
   color: #606060;
 
@@ -460,40 +463,49 @@ header .category .category-scroller .active:hover {
   -webkit-box-orient: vertical;
 }
 
-.card-section .card .creater-date {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-.card-section .card .creater {
+
+.creater-profile {
   display: flex;
   align-items: center;
   gap: 5px;
   width: fit-content;
 }
 
-.card-section .card .creater img {
+.card .creater-profile img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
-.card-section .card .creater .creater-name {
+
+.creater-name {
   color: #606060;
   font-size: var(--my-font-size);
 }
-.card-section .card .date {
+
+.read--time {
   display: flex;
   align-items: center;
   font-size: var(--my-font-size);
   color: #606060;
 }
 
-.card-section .card .date .dot {
+.read--time .dot {
   width: 4px;
   height: 4px;
   background-color: #606060;
   margin-inline: 5px;
   margin-top: 4px;
   border-radius: 50%;
+}
+
+
+footer{
+  text-align: center;
+  padding: 20px ;
+  background-color:#bfbfbf;
+}
+
+footer h3{
+  color: #007bff;
 }
